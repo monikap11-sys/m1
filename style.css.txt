@@ -1,0 +1,38 @@
+body { 
+  font-family: Arial; 
+  background: black; 
+  color: white;
+}
+
+h1 { 
+  background: darkgrey;
+  color: black; 
+  text-align: center; 
+  padding: 10px; 
+}
+
+img { 
+  margin: 10px; 
+  border-radius: 8px; 
+}
+
+form { 
+  background: black; 
+  color: white; 
+  padding: 10px; 
+  margin: 20px; 
+  width: 300px; 
+}
+
+input, select { 
+  width: 100%; 
+  margin: 5px 0; 
+  padding: 5px; 
+  background: grey;
+  color: black;
+}
+
+input[type="submit"] { 
+  background: grey; 
+  color: black; 
+}
