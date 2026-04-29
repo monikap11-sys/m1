@@ -5,29 +5,26 @@
 
 <script>
 function checkRoom() {
+    var name = document.getElementById("name").value;
+    var checkin = document.getElementById("checkin").value;
+    var checkout = document.getElementById("checkout").value;
     var room = document.getElementById("room").value;
-    var deluxeRooms = 2;
-    var suiteRooms = 1;
 
-    if (room == "Deluxe Room") {
-        if (deluxeRooms > 0) {
-            alert("Deluxe Room is Available");
-        } else {
-            alert("Deluxe Room is Not Available");
-        }
+    var result = document.getElementById("result");
+
+    if (name === "" || checkin === "" || checkout === "") {
+        result.innerHTML = "Please fill full information";
+        return;
     }
 
-    if (room == "Suite Room") {
-        if (suiteRooms > 0) {
-            alert("Suite Room is Available");
-        } else {
-            alert("Suite Room is Not Available");
-        }
+    if (room === "Deluxe Room") {
+        result.innerHTML = "Deluxe Room is Available";
+    } else {
+        result.innerHTML = "Suite Room is Not Available";
     }
-
-    return false; // stop form submission
 }
 </script>
+
 
 </head>
 
@@ -57,7 +54,6 @@ function checkRoom() {
 <h2>Suite Room</h2>
 
 <img src="images/room4.jpg" width="200">
-<img src="images/room5 copy.jpg" width="200">
 
 <p><b>Amenities:</b></p>
 <ul>
@@ -72,7 +68,7 @@ function checkRoom() {
 
 <h2>Book Your Room</h2>
 
-<form>
+
 
 Name:<br>
 <input type="text"><br><br>
@@ -91,7 +87,9 @@ Room Type:<br>
 
 <input type="submit" value="Book Now">
 
-</form>
+<button onclick="checkRoom()">Check Availability</button>
+<p id="result"></p>
+
 
 </body>
 </html>
