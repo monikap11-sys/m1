@@ -3,29 +3,6 @@
 <title>Grand Plaza Hotel</title>
 <link rel="stylesheet" href="style.css">
 
-<script>
-function checkRoom() {
-    var name = document.getElementById("name").value;
-    var checkin = document.getElementById("checkin").value;
-    var checkout = document.getElementById("checkout").value;
-    var room = document.getElementById("room").value;
-
-    var result = document.getElementById("result");
-
-    if (name === "" || checkin === "" || checkout === "") {
-        result.innerHTML = "Please fill full information";
-        return;
-    }
-
-    if (room === "Deluxe Room") {
-        result.innerHTML = "Deluxe Room is Available";
-    } else {
-        result.innerHTML = "Suite Room is Not Available";
-    }
-}
-</script>
-
-
 </head>
 
 <body>
@@ -88,7 +65,25 @@ Room Type:<br>
 
 <button onclick="checkRoom()">Check Availability</button>
 <p id="result"></p>
+<script>
+function checkRoom() {
+    var name = document.getElementById("name").value;
+    var checkin = document.getElementById("checkin").value;
+    var checkout = document.getElementById("checkout").value;
+    var room = document.getElementById("room").value;
 
+    if (name === "" || checkin === "" || checkout === "") {
+        document.getElementById("result").innerHTML = "Please fill full information";
+        return;
+    }
+
+    if (room === "Deluxe Room") {
+        document.getElementById("result").innerHTML = "Deluxe Room is Available";
+    } else {
+        document.getElementById("result").innerHTML = "Suite Room is Not Available";
+    }
+}
+</script>
 
 </body>
 </html>
