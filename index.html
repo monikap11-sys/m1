@@ -3,6 +3,32 @@
 <title>Grand Plaza Hotel</title>
 <link rel="stylesheet" href="style.css">
 
+<script>
+function checkRoom() {
+    var room = document.getElementById("room").value;
+    var deluxeRooms = 2;
+    var suiteRooms = 1;
+
+    if (room == "Deluxe Room") {
+        if (deluxeRooms > 0) {
+            alert("Deluxe Room is Available");
+        } else {
+            alert("Deluxe Room is Not Available");
+        }
+    }
+
+    if (room == "Suite Room") {
+        if (suiteRooms > 0) {
+            alert("Suite Room is Available");
+        } else {
+            alert("Suite Room is Not Available");
+        }
+    }
+
+    return false; // stop form submission
+}
+</script>
+
 </head>
 
 <body>
@@ -31,7 +57,7 @@
 <h2>Suite Room</h2>
 
 <img src="images/room4.jpg" width="200">
-<img src="images/room5 copy.jpg" width="200">
+<img src="images/room5 .jpg" width="200">
 
 <p><b>Amenities:</b></p>
 <ul>
