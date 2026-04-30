@@ -6,13 +6,13 @@ function checkRoom() {
 
     let result = document.getElementById("result");
 
-    // Check empty fields
+    
     if (name === "" || checkin === "" || checkout === "") {
         result.innerText = "Please fill full information.";
         return;
     }
 
-    // Simple availability (random)
+   
     let available = Math.random() > 0.5;
 
     if (available) {
