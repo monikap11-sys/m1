@@ -62,26 +62,9 @@ Room Type:<br>
 
 
 <button onclick="checkRoom()">Check Availability</button>
-<p id="result"></p>
-<script>
-function checkRoom() {
-    var name = document.getElementById("name").value;
-    var checkin = document.getElementById("checkin").value;
-    var checkout = document.getElementById("checkout").value;
-    var room = document.getElementById("room").value;
+<p id="result" style="font-weight:bold;"></p>
+<script src="script.js"></script>
 
-    if (name === "" || checkin === "" || checkout === "") {
-        document.getElementById("result").innerHTML = "Please fill full information";
-        return;
-    }
-
-    if (room === "Deluxe Room") {
-        document.getElementById("result").innerHTML = "Deluxe Room is Available";
-    } else {
-        document.getElementById("result").innerHTML = "Suite Room is Not Available";
-    }
-}
-</script>
 
 </body>
 </html>
